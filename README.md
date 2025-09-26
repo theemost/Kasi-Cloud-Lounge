@@ -10,4 +10,4 @@
 
 #Part 2 changes
 - Changed product.html to packages.html
-- Added tools.html page for flavours and hookah tools
+

@@ -3,21 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Bookings</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>    
-        <div>
+    <header>
+        <div>            
             <nav>
                 <div class="logo">
-                    <img src="images/logo1.jpg" alt="Logo?" style="width: 100px;">
+                    <img src="images/logo1.jpg" alt="Logo?">
                 </div>
-                <ul style="list-style: none;">
+
+                <!-- Hidden checkbox -->
+                <input type="checkbox" id="menu-toggle" />
+                <!-- Hamburger icon -->
+                <label for="menu-toggle" class="menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            
+                <ul class="nav-links">
                     <li>
                         <a href="index.html">Home</a>
                     </li>
                     <li>
-                        <a href="products.html">Products</a>
+                        <a href="packages.html">Packages</a>
+                    </li>
+                    <li>
+                        <a href="tools.html">Tools</a>
                     </li>
                     <li>
                         <a href="bookings.html">Bookings</a>
@@ -28,14 +42,13 @@
                     <li>
                         <a href="contact.html">Contact</a>
                     </li>
-                </ul>
+                </ul>   
             </nav>
-        </div>
+        </div> 
     </header>
-    <hr>
     <main>
         <div>
-            <div class="hero">
+                    <div class="hero" style="background: url('images/man-smoking-in-shisha-bar.jpg') no-repeat center center; background-size: cover;">
                 <h1>Reserve Your Table</h1>
                 <p>Secure your spot for the weekend vibe at Kasi Cloud Lounge</p>
             </div>

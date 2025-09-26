@@ -4,20 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <div>            
             <nav>
                 <div class="logo">
-                    <img src="images/logo1.jpg" alt="Logo?" style="width: 100px;">
+                    <img src="images/logo1.jpg" alt="Logo?">
                 </div>
-                <ul style="list-style: none;">
+
+                <!-- Hidden checkbox -->
+                <input type="checkbox" id="menu-toggle" />
+                <!-- Hamburger icon -->
+                <label for="menu-toggle" class="menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            
+                <ul class="nav-links">
                     <li>
                         <a href="index.html">Home</a>
                     </li>
                     <li>
-                        <a href="products.html">Products</a>
+                        <a href="packages.html">Packages</a>
                     </li>
                     <li>
                         <a href="bookings.html">Bookings</a>
@@ -29,17 +40,16 @@
                         <a href="contact.html">Contact</a>
                     </li>
                 </ul>
+                
             </nav>
-        </div>
+        </div> 
     </header>
-    <hr>
+    
     <main>
-        <div class="hero">
+        <!--Hero Section--> 
+        <div class="hero" style="background: url('../images/hubbly.jpg') no-repeat center center; background-size: cover;">
             <h1>Kasi Cloud Lounge</h1>
             <h2>Chill Connect Cloud</h2>
-            <div>
-                <img src="images/Kasi Cloud Vibe.jpg" alt="Our hubbly line up">
-            </div>
             <div>
                 <p >Relax, Connect & Enjoy Premium Shisha Inspired by Local Culture</p>         
                 <a href="bookings.html">
@@ -48,22 +58,26 @@
             </div>
         </div>
         <div>
-            <h2>Our Flavours</h2>
-            <div class="Preview menu">
+            <h2>Our Package of the week!</h2>
+            <div class="package-special">
                 <div>
-                    <h3>Mango Tango</h3>
-                    <img src="images/mango_tango.jpg" alt="Mango tango flavour">
-                    <p>Sweet & tropical flavour with a smooth smoke.</p>
+                    <h4>The Egyptian Trio</h4>
+                    <p>
+                        This week our package of the week is the Egyptian Trio package. 
+                        Perfect for small groups of 3-4 people . With a 3 pipe Egyptian pipe, 
+                        choice of any flavour you want.               
+                    </p>  
                 </div>
+
                 <div>
-                    <h3>Berry Blast</h3>
-                    <img src="images/berry_blast.jpg" alt="Berry blast flavour">
-                    <p>Fruity explosion of berries for a refreshing experience.</p>
+                    <a href="packages.html">        
+                        <button>
+                            More
+                        </button>
+                    </a>
                 </div>
+
             </div>
-            <a href="products.html">
-                <button>Products</button>
-            </a>
         </div>
         <!--About Preview-->
         <div class="about-preview">

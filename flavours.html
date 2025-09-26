@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Responsive Webpage</title>
+<link rel=”stylesheet” href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+        <div class="logo"><img src="images/name.jpg"
+        style="width:50px;height:90px;border-radius: 50%;"/>
+        </div>
+
+        <!-- Hamburger for mobile -->
+        <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+        <span></span>
+        <span></span>
+        <span></span>
+        
+        </div>
+
+        <!-- Navigation links -->
+        <div class="nav-links">
+            <ul>
+                <li>
+                    <a href="home.html">Home</a>
+                </li> 
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="gallery">Gallery</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Welcome to DISD1 hair salon</h1>
+    <p>DISD1 hair salon the house of beauty!!</p>
+	<video width="100%" height="500" controls>
+	<source src="image/aa.mp4" type="video/mp4">
+	</video>
+  </main>
+<footer>
+<div class="footer-info">
+      &copy; 2025 ST1000000. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>

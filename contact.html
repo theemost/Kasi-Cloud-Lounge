@@ -3,21 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <div>        
+        <div>            
             <nav>
                 <div class="logo">
-                    <img src="images/logo1.jpg" alt="Logo?" style="width: 100px;">
+                    <img src="images/logo1.jpg" alt="Logo?">
                 </div>
-                <ul style="list-style: none;">
+
+                <!-- Hidden checkbox -->
+                <input type="checkbox" id="menu-toggle" />
+                <!-- Hamburger icon -->
+                <label for="menu-toggle" class="menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            
+                <ul class="nav-links">
                     <li>
                         <a href="index.html">Home</a>
                     </li>
                     <li>
-                        <a href="products.html">Products</a>
+                        <a href="packages.html">Packages</a>
                     </li>
                     <li>
                         <a href="bookings.html">Bookings</a>
@@ -28,34 +39,42 @@
                     <li>
                         <a href="contact.html">Contact</a>
                     </li>
-                </ul>
+                </ul>               
             </nav>
-        </div>
+        </div> 
     </header>
-    <hr>
     <main>
         <div>
             <!--Add location using an iframe maybe-->
-            <div class="hero">
-                <h2>Contact Us</h2>
+            <div class="hero" style="background: url('images/coal-inside-a-coal-burner.jpg') no-repeat center center; background-size: cover;">
+                <h1>Contact Us</h1>
                 <p>Let's connect!</p>
             </div>  
-            <div>
-                <ul>
-                    <li><a href="https://web.whatsapp.com/">WhatsApp</a></li>
-                    <li><a href="https://instagram.com">Instagram</a></li>
-                    <li><a href="https://facebook.com">Facebook</a></li>
-                    <li><a href="https://tiktok.com">TikTok</a></li>
-                </ul>
-            </div>
-            <div>
+            <div class="form">
                 <h2>Got a question?</h2>
-                <form>
+                <form id="contact-form">
                     <input type="text" name="name" placeholder="Name">
                     <input type="email" name="email" placeholder="Email">
-                    <input type="text" name="Message" placeholder="Message">
+                    <textarea name="message" placeholder="Message"></textarea>
                     <button type="submit" name="submit">Send</button>
                 </form>
+            </div>
+            <div>
+                <h2>Social Media Links</h2>
+                <ul>
+                    <li>
+                        <a href="https://web.whatsapp.com/">WhatsApp</a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com">Instagram</a>
+                    </li>
+                    <li>
+                        <a href="https://facebook.com">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="https://tiktok.com">TikTok</a>
+                    </li>
+                </ul>
             </div>
             <div>
                 <h3>Google Maps location</h3>

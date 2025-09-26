@@ -1,0 +1,219 @@
+/* Reset */
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #333333; /* Pale Blue background */
+    color: #ffffff; /* Default text color */
+}
+
+a {
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ff7f00; /* Orange accents for headings */
+}
+
+/* Hide checkbox */
+#menu-toggle {
+    display: none;
+}
+
+.menu-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.menu-btn span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3 ease;
+}
+
+nav {
+    background-color: black; /* Matte dark grey/charcoal */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin-bottom: 10px
+}
+
+.logo img{
+    width: 60px;
+    height: 60px;
+}
+
+.nav-links {  
+    display: none;
+    flex-direction: row;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    height: 100vh;
+    width: 150px;
+    background: #000;
+    list-style: none;
+    gap: 1.5rem;
+    z-index: 1000;
+    padding: 0 10px;
+}
+
+.nav-links li {
+    text-align: center;
+    padding: 15px 0;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+a:hover {
+    color: #ff7f00; 
+}
+
+/* show menu when checkbox is checked */
+#menu-toggle:checked ~ .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+}
+
+/* Buttons */
+button, .btn {
+    display: inline-block;
+    background-color: #ff7f00;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 0.6rem 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+/* Hero section */
+.hero {
+    position: relative;
+    background-size: cover;  /* Ensures image covers entire section */
+    height: 60vh;           
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+
+.hero h1 h2 {
+    font-size: 3rem;
+    color: #ff7f00;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+.packages-section {
+    text-align: center; /* Centers the heading */
+    padding: 2rem;
+}
+
+.packages-section h2 {
+    font-size: 2rem;
+    color: #ff7f00;
+    margin-bottom: 2rem;
+}
+
+.packages {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Individual package card */
+.package {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #1c1c1c;
+    border: 1px solid #7DF9FF;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    flex: 1 1 100%;
+    transition: transform 0.3s ease;
+    min-height: auto;
+    box-sizing: border-box;
+}
+
+.package:hover {
+    transform: scale(1.01);
+}
+
+/* Ensure content grows to push button down */
+.package-des {
+    flex-grow: 1;
+    color: #ffffff;
+}
+
+/* Button container */
+.call-to-action {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) { 
+    .menu-btn {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        position: static;
+        height: 5vh;
+        width: 10px;
+        flex-direction: row;
+        justify-content: flex-end;
+        background: none;
+    }
+
+    .hero {
+        height: 80vh;
+    }
+
+    .packages {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: stretch;
+        gap: 1.5rem;
+    }
+
+    /* Chat Gpt */
+    .package {
+        flex: 1 1 calc(33.333% - 1rem);
+        max-width: calc(33.333% - 1rem);
+        min-height: 100%; /* Let them stretch evenly */
+    }
+}

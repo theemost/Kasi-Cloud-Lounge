@@ -55,7 +55,7 @@
             <!-- Booking Form -->
             <div>
                 <h2>Fill In Your Details</h2>
-                <form id="bookingForm">
+                <form id="booking-form">
                     <label for="name">Name</label>
                     <input type="text" name="name" placeholder="Your Full Name" required>
                     <label for="email">Email</label>
@@ -68,6 +68,12 @@
                     <input type="time" name="time" required>
                     <label for="guests">Number of Guests</label>
                     <input type="number" name="guests" min="1" max="20" required>
+                    <label for="package">Package</label>
+                    <select id="package-choice" name="package">
+                        <option value="The Egyptian Trio">The Egyptian Trio</option>
+                        <option value="Modern Cloud">Modern Cloud</option>
+                        <option value="Luxury Smoke">Luxury Smoke</option>
+                    </select>
                     <button type="submit" name="submit">Submit Booking</button>
                 </form>
             </div>

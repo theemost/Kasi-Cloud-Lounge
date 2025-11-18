@@ -8,6 +8,8 @@
 - Nuriddar, A. 2021. Close Up Shot of Hot Charcoal. [image]. Available at: https://www.pexels.com/photo/close-up-shot-of-hot-charcoal-9461920/ .Accessed: [20 September 2025]. 
 - Zaitsev, B. 2021. Coal Inside a Coal Burner. [image]. Available at: https://www.pexels.com/photo/coal-inside-a-coal-burner-7973045/ .Accessed: [20 September 2025].
 
-#Part 2 changes
+#ChangeLog
 - Changed product.html to packages.html
-
+- Added vibes.html
+- Added main.js
+- Removed old navigation bar and implemented JavaScript navigation bar

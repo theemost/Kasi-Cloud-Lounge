@@ -1,4 +1,4 @@
-const navItems = ["Home", 'Packages', 'Bookings', 'About', "Contact", 'Vibes' ];
+const navItems = ["Home", "Packages", "Bookings", "About", "Contact", "Vibes" ];
 
 //Get navbar element
 const nav = document.getElementById("navbar");
@@ -41,9 +41,9 @@ navItems.forEach(item => {
     const a = document.createElement("a");
     a.textContent = item;
     if (item == 'Home' ) {
-        item = 'index';
+        item = 'Index';
     }
-    a.href = "" + item.toLowerCase() + ".html";  // Example: #home, #about
+    a.href = "" + item.toLowerCase() + ".html"; 
     li.appendChild(a);
 ul.appendChild(li);
 });
@@ -54,4 +54,91 @@ document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", () => {
         document.getElementById("menu-toggle").checked = false;
 })
+});
+
+// Array of images
+const images = [
+  "images/2guys-smoking.jpg",
+  "images/guy-smoking-hookah.jpg",
+  "images/guy2-smoking.jpg",
+  "images/shisha-lounge-entrance.jpg",
+  "images/yung-swiss-lookalike.jpg",
+  "images/man-smoking-in-shisha-bar.jpg",
+  "images/coal lighting.jpg"
+];
+
+// Containers for the images
+const contentContainer = document.getElementById("content");
+const imageContainer = document.createElement("div")
+imageContainer.className = "image";
+
+// Loop through the array and create img elements
+images.forEach((src, index) => {
+    const img = document.createElement('img');
+    img.src = src;                             
+    img.alt = "Vibes Image";   
+    img.loading = "lazy";
+
+    img.onload = () => img.classList.add("loaded");  // Fade-in
+
+    img.addEventListener("click", () => openLightbox(index)); // Lightbox              
+    
+    imageContainer.appendChild(img);        
+});
+
+contentContainer.appendChild(imageContainer);   
+
+// Lightbox elements
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+// Create Prev/Next buttons
+const prevBtn = document.createElement("button");
+prevBtn.id = "prevBtn";
+prevBtn.className = "nav-btn";
+prevBtn.textContent = "❮ Prev";
+
+const nextBtn = document.createElement("button");
+nextBtn.id = "nextBtn";
+nextBtn.className = "nav-btn";
+nextBtn.textContent = "Next ❯";
+
+// Append buttons to lightbox
+lightbox.appendChild(prevBtn);
+lightbox.appendChild(nextBtn);
+
+// Current index of image
+let currentIndex = 0;
+
+// Open lightbox function
+function openLightbox(index) {
+    currentIndex = index;
+    lightboxImg.src = images[currentIndex];
+    lightbox.style.display = "flex";
+}
+
+
+// Navigate to next image
+function nextImage(e) {
+    e.stopPropagation(); // prevent closing
+    currentIndex = (currentIndex + 1) % images.length;
+    lightboxImg.src = images[currentIndex];
+}
+
+// Navigate to previous image
+function prevImage(e) {
+    e.stopPropagation();
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    lightboxImg.src = images[currentIndex];
+}
+
+// Event listeners for buttons
+nextBtn.addEventListener("click", nextImage);
+prevBtn.addEventListener("click", prevImage);
+
+// Close lightbox when clicking outside image
+lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+        lightbox.style.display = "none";
+    }
 });

@@ -8,66 +8,36 @@
 </head>
 <body>
     <header>
-        <div>            
-            <nav>
-                <div class="logo">
-                    <img src="images/logo1.jpg" alt="Logo?">
-                </div>
-
-                <!-- Hidden checkbox -->
-                <input type="checkbox" id="menu-toggle" />
-                <!-- Hamburger icon -->
-                <label for="menu-toggle" class="menu-btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>
-            
-                <ul class="nav-links">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="packages.html">Packages</a>
-                    </li>
-                    <li>
-                        <a href="tools.html">Tools</a>
-                    </li>
-                    <li>
-                        <a href="bookings.html">Bookings</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                </ul>   
-            </nav>
-        </div> 
+        <nav id="navbar"></nav>
     </header>
     <main>
         <div>
-                    <div class="hero" style="background: url('images/man-smoking-in-shisha-bar.jpg') no-repeat center center; background-size: cover;">
+            <div class="hero" style="background: url('images/man-smoking-in-shisha-bar.jpg') no-repeat center center; background-size: cover;">
                 <h1>Reserve Your Table</h1>
                 <p>Secure your spot for the weekend vibe at Kasi Cloud Lounge</p>
             </div>
             <!-- Booking Form -->
-            <div>
+            <div class="form">
                 <h2>Fill In Your Details</h2>
-                <form id="bookingForm">
+                <form id="booking-form">
                     <label for="name">Name</label>
-                    <input type="text" name="name" placeholder="Your Full Name" required>
+                    <input type="text" name="name" id="name" placeholder="Your Full Name" required>
                     <label for="email">Email</label>
-                    <input type="email" name="email" placeholder="you@example.com" required>
+                    <input type="email" name="email" id="email" placeholder="you@example.com" required>
                     <label for="phone">Phone</label>
-                    <input type="tel" name="phone" placeholder="+27 600 000 000" required>
+                    <input type="tel" name="phone" id="phone" placeholder="+27 600 000 000" required>
                     <label for="date">Date</label>
-                    <input type="date" name="date" required>
+                    <input type="date" name="date" id="date" required>
                     <label for="time">Time</label>
-                    <input type="time" name="time" required>
+                    <input type="time" name="time" id="time" required>
                     <label for="guests">Number of Guests</label>
-                    <input type="number" name="guests" min="1" max="20" required>
+                    <input type="number" name="guests" id="guests" min="1" max="20" required>
+                    <label for="package">Package</label>
+                    <select id="package-choice" name="package">
+                        <option value="The Egyptian Trio">The Egyptian Trio</option>
+                        <option value="Modern Cloud">Modern Cloud</option>
+                        <option value="Luxury Smoke">Luxury Smoke</option>
+                    </select>
                     <button type="submit" name="submit">Submit Booking</button>
                 </form>
             </div>
@@ -89,5 +59,6 @@
             <a href="https://tiktok.com">TikTok</a>
         </div>
     </footer>
+    <script src="javascript/main.js"></script>
 </body>
 </html>

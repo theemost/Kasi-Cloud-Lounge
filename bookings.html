@@ -32,7 +32,6 @@
                     <input type="time" name="time" id="time" required>
                     <label for="guests">Number of Guests</label>
                     <input type="number" name="guests" id="guests" min="1" max="20" required>
-                    <input type="number" name="guests" min="1" max="20" required>
                     <label for="package">Package</label>
                     <select id="package-choice" name="package">
                         <option value="The Egyptian Trio">The Egyptian Trio</option>
@@ -41,6 +40,9 @@
                     </select>
                     <button type="submit" name="submit">Submit Booking</button>
                 </form>
+                
+                <!-- Toast container -->
+                <div id="toast" class="toast"></div>
             </div>
             <!-- Contact (Call to action) -->
             <div>
